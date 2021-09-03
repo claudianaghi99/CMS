@@ -17,13 +17,12 @@ img{
     width: 2%;
 }
 
-.add-button{
-    width: 7%;
-    height: 2rem;
-}
 
 .left-part{
     font-family:system-ui;
+    background-color: #f0f0f0;
+    width: 35%;
+    height: ;
 }
 
 .first-line{
@@ -36,10 +35,30 @@ img{
     border-bottom: 3px solid #f0f0f0;  
     width: 100%;
 }
-
+/*
 .third-line {
     position: absolute;
     border-left: 3px solid #f0f0f0;  
     height:1000px;
     right: 67%;
+}
+*/
+input {
+    width: 97%;
+}
+
+.image-input{
+    width:94%;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3%;
+    padding-top: 3%;
+}
+
+.add-button{
+    width: 20%;
+    height: 2rem;
 }
