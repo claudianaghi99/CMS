@@ -4,15 +4,42 @@
     box-sizing: border-box;
 } 
 
+/*Header*/
 h1{
     padding-left: 2%;
     padding-top: 1%;
     font-family:system-ui;
 }
+
+/*Left part of the page*/
+/*Add image*/
 img{
     width: 2%;
 }
+
 .add-button{
     width: 7%;
     height: 2rem;
+}
+
+.left-part{
+    font-family:system-ui;
+}
+
+.first-line{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #f0f0f0; 
+}
+
+.second-line {
+    padding-bottom: 5px;
+    border-bottom: 3px solid #f0f0f0;  
+    width: 100%;
+}
+
+.third-line {
+    position: absolute;
+    border-left: 3px solid #f0f0f0;  
+    height:1000px;
+    right: 67%;
 }
