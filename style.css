@@ -74,3 +74,32 @@ input {
     width: 65%;
 }
 
+table,th{
+    border:1px solid black;
+}
+
+
+
+th, tr {
+    padding: 20px;
+  }
+
+
+.div-table{
+    padding-top: 1rem;
+  }
+
+.first-name-cell{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+.last-name-cell{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}  
+
+.email-cell{
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
