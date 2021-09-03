@@ -9,3 +9,10 @@ h1{
     padding-top: 1%;
     font-family:system-ui;
 }
+img{
+    width: 2%;
+}
+.add-button{
+    width: 7%;
+    height: 2rem;
+}
