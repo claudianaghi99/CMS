@@ -71,13 +71,12 @@ input {
 .right-part{
     padding-left: 1%;
     background-color:#c5c4c4;
-    width: 65%;
+    width: 70rem;
 }
 
 table,th{
     border:1px solid black;
 }
-
 
 
 th, tr {

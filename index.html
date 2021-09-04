@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
     <title>CMS</title>
+    <script src="main.js"></script>
 </head>
 <body>
     <div>
@@ -24,23 +25,23 @@
         <div class ="employee-info">
             <div class="first-name">
                 <p>First Name</p>
-                <input type="text">
+                <input type="text" name="fname" id="fname">
             </div>
             <div class="last-name">
                 <p>Last Name</p>
-                <input type="text">
+                <input type="text" name="lname" id="lname">
             </div>
             <div class="email">
                 <p>E-mail</p>
-                <input type="text">
+                <input type="text" name="email" id="email">
             </div>
             <div class="sex">
                 <p>Sex</p>
-                <input type="text">
+                <input type="text" name="sex" id="sex">
             </div>
             <div class="birthdate">
                 <p>Date of birth</p>
-                <input type="text">
+                <input type="text" name="age" id="age">
             </div>
             <div class="photo">
                 <p>Photo</p>
@@ -48,8 +49,8 @@
                 <input type="text" name="" id="" class="image-input">
             </div>
             <div class="button">
-                <button class="add-button">
-                    Add
+                <button class="add-button" onclick="addRow()">
+                    Add Row
                 </button>
             </div>
         </div>
@@ -58,20 +59,13 @@
     <div class="right-part">
         <h2>Employees</h2>
         <div class="div-table">
-            <table>
+            <table border="1">
                 <tr class="table-first-line">
                     <th class="first-name-cell">First Name</th>   
                     <th class="last-name-cell">Last Name</th>
                     <th class="email-cell">E-mail</th>
                     <th>Sex</th>
                     <th>Date of Birth</th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
                 </tr>
             </table>
         </div>
