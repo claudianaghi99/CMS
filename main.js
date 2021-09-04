@@ -6,7 +6,7 @@ function addRow(){
     var email = document.getElementById('email').value;
     var sex = document.getElementById('sex-list').value;
     var birthday = document.getElementById('birthday').value;
-
+    var trash = 'delete';
 
     // Required to complete the fields
     if (fname== "") {
@@ -51,6 +51,7 @@ function addRow(){
     var cel3 = newRow.insertCell(2);
     var cel4 = newRow.insertCell(3);
     var cel5 = newRow.insertCell(4);
+    var cel6 = newRow.insertCell(5);
 
     // add values to the cells
     cel1.innerHTML = fname;
@@ -58,5 +59,11 @@ function addRow(){
     cel3.innerHTML = email;
     cel4.innerHTML = sex;
     cel5.innerHTML = birthday;
+    cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger">';
 
+}
+
+function delStudent(Stud){
+    var s=Stud.parentNode.parentNode;
+    s.parentNode.removeChild(s);
 }

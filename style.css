@@ -38,14 +38,7 @@ img{
     border-bottom: 3px solid #575454;  
     width: 100%;
 }
-/*
-.third-line {
-    position: absolute;
-    border-left: 3px solid #f0f0f0;  
-    height:1000px;
-    right: 67%;
-}
-*/
+
 input {
     width: 97%;
 }
@@ -54,17 +47,6 @@ input {
     width:94%;
 }
 
-.button{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 3%;
-    padding-top: 3%;
-}
-
-.add-button{
-    width: 20%;
-    height: 2rem;
-}
 
 /*Right part*/
 
@@ -94,11 +76,11 @@ th, tr {
   }
 
 .last-name-cell{
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }  
 
 .email-cell{
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
