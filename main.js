@@ -60,7 +60,6 @@ function addRow(){
     cel4.innerHTML = sex;
     cel5.innerHTML = birthday;
     cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger">';
-
 }
 
 function delStudent(Stud){
