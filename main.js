@@ -8,7 +8,32 @@ function addRow(){
     var birthday = document.getElementById('birthday').value;
 
 
-    // // Required to complete the fields
+    // Required to complete the fields
+    if (fname== "") {
+        alert("First name must be filled out");
+        return false;
+     }
+
+    if (fname == "") {
+        alert("Last name must be filled out");
+        return false;
+    }
+
+    if (email == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+
+    if (sex == "") {
+        alert("Sex must be filled out");
+        return false;
+    }
+
+    if (birthday == "") {
+        alert("Birthday must be filled out");
+        return false;
+    }
+
 
     // get the html table 
     // 0 = the first table
@@ -34,37 +59,4 @@ function addRow(){
     cel4.innerHTML = sex;
     cel5.innerHTML = birthday;
 
-}
-
-function validateForm(){
-    let fname_required = document.forms["myForm"]["fname"].value;
-    if (fname_required == "") {
-       alert("First name must be filled out");
-       return false;
-   }
-  
-   let lname_required = document.forms["myForm"]["lname"].value;
-   if (lname_required == "") {
-      alert("Last name must be filled out");
-      return false;
-   }
-
-  let email_required = document.forms["myForm"]["email"].value;
-  if (email_required == "") {
-     alert("E-mail name must be filled out");
-     return false;
-   }
-
-   let sex_required = document.forms["myForm"]["sex-list"].value;
-   if (sex_required == "") {
-      alert("Sex must be chosen");
-      return false;
-   }
-
-   let birthday_required = document.forms["myForm"]["birthday"].value;
-   if (birthday_required == "") {
-      alert("Birthday must be filled out");
-      return false;
-  }
-   
 }
