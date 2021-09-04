@@ -4,7 +4,7 @@ function addRow(){
     var fname = document.getElementById('fname').value;
     var lname = document.getElementById('lname').value;
     var email = document.getElementById('email').value;
-    var sex = document.getElementById('sex').value;
+    var sex = document.getElementById('sex-list').value;
     var age = document.getElementById('age').value;
 
     // get the html table 
