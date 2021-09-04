@@ -23,40 +23,43 @@
         <div class="second-line"></div>
         <div class="third-line"></div>
         <div class ="employee-info">
-            <div class="first-name">
-                <p>First Name</p>
-                <input type="text" name="fname" id="fname">
-            </div>
-            <div class="last-name">
-                <p>Last Name</p>
-                <input type="text" name="lname" id="lname">
-            </div>
-            <div class="email">
-                <p>E-mail</p>
-                <input type="text" name="email" id="email">
-            </div>
-            <div class="sex">
-                <p>Sex</p>
-                <select id="sex-list" id="sex">
-                    <option value="Female">Female</option>
-                    <option value="Male">Male</option>
-                    <option value="Unknown">Unknown</option>
-                </select>
-            </div>
-            <div class="birthdate">
-                <p>Date of birth</p>
-                <input type="text" name="age" id="age">
-            </div>
-            <div class="photo">
+
+        <div name="myForm">
+            <label for="firstname">First name</label>
+            <input type="text" name="fname" id="fname" required>
+
+            <label for="lastname">Last name</label>
+            <input type="text" name="lname" id="lname" required>
+
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" required>
+
+            <label for="sex">Sex</label>
+            <select id="sex-list" id="sex" required>
+                <option value="">None</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+
+            <br><br>
+
+            <label for="birthday">Date of birth</label>
+                <input type="date" id="birthday" name="birthday" required>
+            
+                <div class="photo">
                 <p>Photo</p>
                 <img src="addimage.png" alt="Add image icon">
                 <input type="text" name="" id="" class="image-input">
             </div>
-            <div class="button">
+
+            <input type="submit" value="Submit" onclick="addRow(); validateForm();">
+            <!-- <div class="button">
                 <button class="add-button" onclick="addRow()">
                     Add Row
                 </button>
-            </div>
+            </div> -->
+         </div>
         </div>
     </div>
 
