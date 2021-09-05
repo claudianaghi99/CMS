@@ -40,7 +40,7 @@
             <div>
                 <br>
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="E-mail" onfocus="this.placeholder = ' ' " onblur=" this.placeholder = 'E-mail'"required>
+                <input type="email" name="email" id="email" placeholder="E-mail" onfocus="this.placeholder = ' ' " onblur=" this.placeholder = 'E-mail'" required>
             </div>
 
             <div class="sex-select">
@@ -81,7 +81,7 @@
         <h2>Employees</h2>
         <div class="filter-search">
             <label for="search">Filter by name</label>
-            <input type="text" name="search" id="search" placeholder="Search...">
+            <input type="text" name="search" id="search" placeholder="Search..." onfocus="searchFunction();this.placeholder ='';" onblur=" this.placeholder = 'Search...'">
             <i class="fas fa-search"></i>
         </div>
         <div class="div-table">
@@ -120,20 +120,5 @@
         </div>
     </div>
     </div>
-    <script>
-        
-const searchInput = document.getElementById("search");
-const rows = document.querySelectorAll('tbody tr');
-//console.log(rows2);
-   
-searchInput.addEventListener('keyup',function(event){
-const q = event.target.value.toLowerCase();
-rows.forEach((row) => {
-    row.querySelector('th').textContent.toLowerCase().startsWith(q)
-     ? (row.style.display = 'table-row')
-     : (row.style.display = 'none');
-});
-});
-    </script>
 </body>
 </html>
