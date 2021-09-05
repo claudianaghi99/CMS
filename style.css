@@ -24,7 +24,7 @@ h1{
 input {
     width: 97%;
     line-height: 2rem;
-    
+    border-radius: 8px;
 }
 
 .myForm label{
