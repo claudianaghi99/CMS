@@ -2,9 +2,8 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    font-family:system-ui;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 } 
-
 .contents{
     display: flex;
 }
@@ -16,18 +15,23 @@ h1{
 }
 
 /*Left part of the page*/
-/*Add image*/
-img{
-    width: 2%;
-}
-
 
 .left-part{
-    font-family:system-ui;
     background-color: #f0f0f0;
     width: 35%;
 }
 
+input {
+    width: 97%;
+    line-height: 2rem;
+    
+}
+
+.myForm label{
+    font-size: 150%;
+}
+
+/*Lines*/
 .first-line{
     padding-bottom: 5px;
     border-bottom: 3px solid #575454; 
@@ -38,15 +42,6 @@ img{
     border-bottom: 3px solid #575454;  
     width: 100%;
 }
-
-input {
-    width: 97%;
-}
-
-.image-input{
-    width:94%;
-}
-
 
 /*Right part*/
 
