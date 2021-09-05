@@ -5,9 +5,10 @@ function addRow(){
     var lname = document.getElementById('lname').value;
     var email = document.getElementById('email').value;
     var sex = document.getElementById('sex-list').value;
-    var birthday = document.getElementById('birthday').value;
+    var birthday = formatDate(document.getElementById('birthday').value);
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+    
     // Required to complete the fields
     if (fname== "") {
         alert("First name must be filled out");
@@ -43,7 +44,6 @@ function addRow(){
         return false;
     }
     
-    
     // get the html table 
     // 0 = the first table
     var table=document.getElementsByTagName('table')[0];
@@ -68,13 +68,33 @@ function addRow(){
     cel4.innerHTML = sex;
     cel5.innerHTML = birthday;
     cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger">';
-
-
-
 }
 
 function delStudent(Stud){
     var s=Stud.parentNode.parentNode;
     s.parentNode.removeChild(s);
 }
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'Octomber',
+    'November',
+    'December',
+]
+function formatDate(date){
 
+    var formatter = date.split('-')
+    var year = formatter[0]
+    var monthIndex = Number(formatter[1])
+    var month = months[monthIndex-1]
+    var day = formatter[2]
+
+    return `${day} ${month} ${year}`
+}
