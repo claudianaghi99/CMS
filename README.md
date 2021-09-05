@@ -2,9 +2,8 @@
 Content Management System for employees
 
 Veti construi un CMS (content management system) pentru angajati. Mai pe intelesul tuturor, un tabel cu angajati.
-Inca nu legam tabelul la un backend, momentan ne focusam pe input si output local. Taskul urmator se va focusa pe integrare cu backend.
 
-- [] Informatiile care se cer despre angajati:
+- [ ] Informatiile care se cer despre angajati:
 Nume
 Prenume
 Email
@@ -13,12 +12,9 @@ Data nasterii
 BONUS: poza
 Userul trebuie sa poata face input la toate datele astea intr-o pagina web. Informatiile vor fi afisate intr-un tabel, in aceeasi pagina.
 
-
-Mentiuni:
-Ne intereseaza functionalitatea, nu designul
-Git repository nou, stiti deja cum sta treaba cu commit-uri clar definite, cu mesaje clare
 Pentru Sex, userul va putea alege dintr-un dropdown
-Pentru data nasterii, userul va putea alege dintr-un date picker (BONUS userul nu poate sa aiba mai putin de 16 ani)
+Pentru data nasterii, userul va putea alege dintr-un date picker 
+BONUS userul nu poate sa aiba mai putin de 16 ani
 Toate fieldurile sunt obligatorii (in afara de poza), daca userul nu completeaza unul din ele, primeste eroare
 Angajatii pot fi stersi din tabel cu un buton X in partea dreapta
 
