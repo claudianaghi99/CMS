@@ -6,7 +6,7 @@ function addRow(){
     var email = document.getElementById('email').value;
     var sex = document.getElementById('sex-list').value;
     var birthday = document.getElementById('birthday').value;
-    var trash = 'delete';
+    const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     // Required to complete the fields
     if (fname== "") {
@@ -32,9 +32,18 @@ function addRow(){
     if (birthday == "") {
         alert("Birthday must be filled out");
         return false;
+    } 
+
+    
+    if(regex.test(String(email).toLowerCase())){
+
     }
-
-
+    else{
+        alert("Email not valid")
+        return false;
+    }
+    
+    
     // get the html table 
     // 0 = the first table
     var table=document.getElementsByTagName('table')[0];
@@ -44,7 +53,6 @@ function addRow(){
     // table.rows.length = end
     var newRow = table.insertRow(table.rows.length);
 
-    
     // add cells to the row
     var cel1 = newRow.insertCell(0);
     var cel2 = newRow.insertCell(1);
@@ -60,9 +68,13 @@ function addRow(){
     cel4.innerHTML = sex;
     cel5.innerHTML = birthday;
     cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger">';
+
+
+
 }
 
 function delStudent(Stud){
     var s=Stud.parentNode.parentNode;
     s.parentNode.removeChild(s);
 }
+
