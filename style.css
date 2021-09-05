@@ -4,7 +4,8 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     color:black;
-    padding-left: 3px;
+    padding-left: 0.25%;
+    padding-right: 0.25%;
 } 
 .contents{
     display: flex;
@@ -12,15 +13,19 @@
 
 /*Header*/
 h1{
-    padding-left: 2%;
+    display: flex;
+    justify-content: center;
     padding-top: 1%;
     padding-bottom: 35px;
     color: white;
 }
 
-/*Left part of the page*/
+h2{
+    padding-top: 1%;
+}
 
-.left-part{
+/*Left part of the page*/
+.contents .left-part{
     width: 35%;
     background-color: white;
     border-radius: 15px;
@@ -54,16 +59,23 @@ input {
     border-width: 2px;
     border-color: rgb(88, 87, 87);
 }
+/*Middle part*/
+
+.contents .middle-part{
+    padding-left: 1%;
+}
 
 /*Right part*/
 
-.right-part{
-    padding-left: 1%;
+.contents .right-part{
+    padding-left: 1.3%;
     width: 70rem;
+    background-color: white;
+    border-radius: 15px;
 }
 
 table,th{
-    border:1px solid black;
+    border: 1px solid black;
 }
 
 th, tr {
@@ -76,19 +88,34 @@ th, tr {
   }
 
 .first-name-cell{
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
 .last-name-cell{
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }  
 
 .email-cell{
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
 }
+
+.birthday-cell{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.sex-cell{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.trash-cell{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
 .css-selector {
     background: linear-gradient(270deg, #355c7d, #6c5b7b, #c06c84);
     background-size: 600% 600%;
