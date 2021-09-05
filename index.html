@@ -79,21 +79,60 @@
     </div>
     <div class="right-part">
         <h2>Employees</h2>
+        <div class="filter-search">
+            <label for="search">Filter by name</label>
+            <input type="text" name="search" id="search" placeholder="Search...">
+        </div>
         <div class="div-table">
             <table id="table">
-                <tr class="table-first-line">
-                    <th class="first-name-cell">First Name</th>   
-                    <th class="last-name-cell">Last Name</th>
-                    <th class="email-cell">E-mail</th>
-                    <th class="sex-cell">Sex</th>
-                    <th class="birthday-cell">Date of Birth</th>
-                    <th class="delete-cell">
-                        <i class="fas fa-trash-alt"></i>
-                    </th>
-                </tr>
+                <thead>
+                    <tr class="table-first-line">
+                        <th class="first-name-cell">First Name</th>   
+                        <th class="last-name-cell">Last Name</th>
+                        <th class="email-cell">E-mail</th>
+                        <th class="sex-cell">Sex</th>
+                        <th class="birthday-cell">Date of Birth</th>
+                        <th class="delete-cell">
+                            <i class="fas fa-trash-alt"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Claudia</th>
+                        <th>Naghi</th>
+                        <th>claudia.naghi@principal33.com</th>
+                        <th>Female</th>
+                        <th>11 September 1999</th>
+                        <th><input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></th>
+                    </tr>
+                    <tr>
+                        <th>Ana</th>
+                        <th>Naghi</th>
+                        <th>claudia.naghi@principal33.com</th>
+                        <th>Female</th>
+                        <th>11 September 1999</th>
+                        <th><input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></th>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
     </div>
+    <script>
+        
+const searchInput = document.getElementById("search");
+const rows = document.querySelectorAll('tbody tr');
+//console.log(rows2);
+   
+searchInput.addEventListener('keyup',function(event){
+const q = event.target.value.toLowerCase();
+rows.forEach((row) => {
+    row.querySelector('th').textContent.toLowerCase().startsWith(q)
+     ? (row.style.display = 'table-row')
+     : (row.style.display = 'none');
+});
+});
+    </script>
 </body>
 </html>

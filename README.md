@@ -14,7 +14,7 @@ Userul trebuie sa poata face input la toate datele astea intr-o pagina web. Info
 
 - [x] Pentru Sex, userul va putea alege dintr-un dropdown
 - [x] Pentru data nasterii, userul va putea alege dintr-un date picker 
-- [ ] BONUS userul nu poate sa aiba mai putin de 16 ani
+- [x] BONUS userul nu poate sa aiba mai putin de 16 ani
 - [x] Toate fieldurile sunt obligatorii (in afara de poza), daca userul nu completeaza unul din ele, primeste eroare
 - [x] Angajatii pot fi stersi din tabel cu un buton X in partea dreapta
 
@@ -25,7 +25,7 @@ Userul trebuie sa poata face input la toate datele astea intr-o pagina web. Info
 - [ ] BONUS: angajatii pot sa fie sortati alfabetic, dupa nume
 - [ ] BONUS: angajatii pot sa fie sortati dupa data nasterii
 - [ ] BONUS: angajatii pot sa fie filtrati dupa sex / data nasterii / daca au poza sau nu
-- [ ] BONUS: search bar pentru cautarea angajatilor - rezultatele vor fi afisate in tabel (practic filtrare dupa string)
+- [x] BONUS: search bar pentru cautarea angajatilor - rezultatele vor fi afisate in tabel (practic filtrare dupa string)
 - [ ] BONUS: persistenta cu JSON local sau local storage
 - [ ] BONUS: make it look good
 - [ ] BONUS: input de date cu un modal

@@ -8,7 +8,7 @@ function addRow(){
     var birthday = formatDate(document.getElementById('birthday').value);
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
-    // Required to complete the fields
+    // Required to complete the following fields
     if (fname== "") {
         alert("First name must be filled out!");
         return false;
@@ -92,6 +92,7 @@ const months = [
     'November',
     'December',
 ]
+
 function formatDate(user_date){
 
     var formatter = user_date.split('-')

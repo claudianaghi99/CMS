@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding:0;
     box-sizing: border-box;
@@ -7,12 +7,13 @@
     padding-left: 0.25%;
     padding-right: 0.25%;
 } 
-.contents{
+
+.contents {
     display: flex;
 }
 
 /*Header*/
-h1{
+h1 {
     display: flex;
     justify-content: center;
     padding-top: 1%;
@@ -20,12 +21,18 @@ h1{
     color: white;
 }
 
-h2{
+.contents .left-part h2 {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.contents .right-part h2 {
     padding-top: 1%;
+    text-align: center;
 }
 
 /*Left part of the page*/
-.contents .left-part{
+.contents .left-part {
     width: 35%;
     background-color: white;
     border-radius: 15px;
@@ -40,78 +47,83 @@ input {
     background-color: #fafafa;
 }
 
-#file{
+#file {
     background-color: white;
 }
 
-.myForm{
+.myForm {
     padding-left: 1%;
     
 }
-.myForm label{
+.myForm label {
     font-size: 150%;
 }
 
-.myForm .sex-select select{
-    padding-left: 6%;
+.myForm .sex-select select {
     font-size:100%;
     border-radius: 8px;
     border-width: 2px;
     border-color: rgb(88, 87, 87);
 }
-/*Middle part*/
 
-.contents .middle-part{
+.submit-input {
+    padding-bottom: 2%;
+}
+
+/*Middle part*/
+.contents .middle-part {
     padding-left: 1%;
 }
 
 /*Right part*/
-
-.contents .right-part{
+.contents .right-part {
     padding-left: 1.3%;
     width: 70rem;
     background-color: white;
     border-radius: 15px;
 }
 
-table,th{
-    border: 1px solid black;
+.table-first-line table,
+th,
+td {
+    border: 2px solid black;
+    text-align: center;
 }
 
-th, tr {
+.table-first-line th, tr {
     padding: 20px;
-  }
+}
 
-
-.div-table{
+.div-table {
     padding-top: 1rem;
-  }
+}
 
-.first-name-cell{
+.first-name-cell {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
+}
 
-.last-name-cell{
+.last-name-cell {
     padding-left: 2rem;
     padding-right: 2rem;
 }  
 
-.email-cell{
+.email-cell {
     padding-left: 7rem;
     padding-right: 7rem;
 }
 
-.birthday-cell{
+.birthday-cell {
     padding-left: 3rem;
     padding-right: 3rem;
 }
 
-.sex-cell{
+.sex-cell {
     padding-left: 2rem;
     padding-right: 2rem;
 }
-.trash-cell{
+
+.trash-cell {
     padding-left: 4rem;
     padding-right: 4rem;
 }
@@ -146,3 +158,5 @@ th, tr {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+
