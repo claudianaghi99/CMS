@@ -6,6 +6,7 @@ function addRow(){
     var email = document.getElementById('email').value;
     var sex = document.getElementById('sex-list').value;
     var birthday = document.getElementById('birthday').value;
+    var formatBirthday = moment(document.getElementById('birthday').value);
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
     // Required to complete the following fields
@@ -66,38 +67,16 @@ function addRow(){
     cel2.innerHTML = lname;
     cel3.innerHTML = email;
     cel4.innerHTML = sex;
-    cel5.innerHTML = formatDate(birthday);
+    cel5.innerHTML = formatBirthday.format("DD MMMM YYYY");
     cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="deleteRow(this);" class="btn btn-danger">';
 }
 
 function deleteRow(employee) {
-    var e=employee.parentNode.parentNode;
-    e.parentNode.removeChild(e);
-}
-const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'Octomber',
-    'November',
-    'December',
-]
-
-function formatDate(user_date){
-
-    var formatter = user_date.split('-')
-    var year = formatter[0]
-    var monthIndex = Number(formatter[1])
-    var month = months[monthIndex-1]
-    var day = formatter[2]
-
-    return `${day} ${month} ${year}`
+    var result = confirm("Are you sure you want to delete this row?");
+    if (result) {
+        var e=employee.parentNode.parentNode;
+        e.parentNode.removeChild(e);
+    }
 }
 
 function calculateAge(birthday) { 
@@ -155,7 +134,6 @@ function selectedOption() {
         }
 }
 
-  
 function validate(inputID, string) {
     const input = document.getElementById(inputID);
     const validityState = input.validity;

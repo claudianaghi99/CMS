@@ -14,10 +14,9 @@
 
 /*Header*/
 h1 {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding-top: 1%;
-    padding-bottom: 35px;
+    padding-bottom: 2%;
     color: white;
 }
 
@@ -41,6 +40,7 @@ h1 {
 }
 
 input {
+    padding-left: 1%;
     width: 97%;
     line-height: 2rem;
     border-radius: 8px;
@@ -81,6 +81,7 @@ input {
     background-color: white;
     border-radius: 15px;
     padding-left: 1%;
+    padding-right: 1.5%;
 }
 
 table,
@@ -136,8 +137,8 @@ thead .table-first-line .delete-cell {
     padding-left: 0.7%;
 }
 .filter-search input {
-    position: relative;
-    width: 97.7%;
+    padding-left: 1%;
+    width: 100%;
 }
 
 .sort-select{
@@ -175,4 +176,19 @@ thead .table-first-line .delete-cell {
     100%{background-position:0% 50%}
 }
 
+@media(max-width: 800px){
 
+    .contents{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .contents .left-part{
+        width: 100%;
+    }
+
+    .contents .right-part{
+        height: 110%;
+    }
+}

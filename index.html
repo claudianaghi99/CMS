@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Nunito:wght@800&display=swap" rel="stylesheet">
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/b21073efe8.js" crossorigin="anonymous"></script>
+    <script src="lib/moment/moment.min.js"></script>
 </head>
 <body  class="css-selector">
     <div>
@@ -19,7 +20,7 @@
     </div>
     <div class="contents">
      <div class="left-part">
-        <div>
+        <div class="heading">
             <h2>Employee Information</h2>
         </div>
         <div class ="employee-info">
@@ -68,7 +69,7 @@
 
             <div class="submit-input">
                 <br>
-                <input style="height:50px; font-size:120%;" id="submit" type="submit" value="Submit" onclick="addRow(); previewFile();" >
+                <input style="height:50px; font-size:120%;" id="submit" type="submit" value="Submit" onclick="addRow();" >
             </div>
          </div>
         </div>
