@@ -22,10 +22,10 @@ Userul trebuie sa poata face input la toate datele astea intr-o pagina web. Info
 - [x] BONUS: validare pe email cu regex
 - [x] BONUS: data nasterii va fi afisata in formatul urmator: 23.04.2021 va fi afisat ca “23 Aprilie 2021” (puteti face de mana, sau cu moment.js)
 - [ ] BONUS: poza angajatului va fi afisata in stanga numelui, intr-o componenta rotunda (ca poza de profil de la instagram/facebook/teams)
-- [ ] BONUS: angajatii pot sa fie sortati alfabetic, dupa nume
+- [x] BONUS: angajatii pot sa fie sortati alfabetic, dupa nume
 - [ ] BONUS: angajatii pot sa fie sortati dupa data nasterii
 - [ ] BONUS: angajatii pot sa fie filtrati dupa sex / data nasterii / daca au poza sau nu
 - [x] BONUS: search bar pentru cautarea angajatilor - rezultatele vor fi afisate in tabel (practic filtrare dupa string)
 - [ ] BONUS: persistenta cu JSON local sau local storage
-- [ ] BONUS: make it look good
+- [x] BONUS: make it look good
 - [ ] BONUS: input de date cu un modal
