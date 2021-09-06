@@ -44,7 +44,7 @@ input {
     width: 97%;
     line-height: 2rem;
     border-radius: 8px;
-    background-color: #fafafa;
+    background-color: white;
 }
 
 #file {
@@ -140,12 +140,6 @@ thead .table-first-line .delete-cell {
     width: 97.7%;
 }
 
-.filter-search i {
-    position: absolute;
-    right: 50px;
-    padding-top: 10px;
-    color: #c06c84;
-}
 .sort-select{
     display:flex;
     padding-left: 0.7%;

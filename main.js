@@ -5,56 +5,52 @@ function addRow(){
     var lname = document.getElementById('lname').value;
     var email = document.getElementById('email').value;
     var sex = document.getElementById('sex-list').value;
-    var birthday = formatDate(document.getElementById('birthday').value);
+    var birthday = document.getElementById('birthday').value;
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
     // Required to complete the following fields
     if (fname== "") {
-        alert("First name must be filled out!");
+        validate('fname','You must fill this out.');
         return false;
     }
 
     if (lname == "") {
-        alert("Last name must be filled out!");
+        validate('lname','You must fill this out.');
         return false;
     }
 
     if (email == "") {
-        alert("Email must be filled out!");
+        validate('email','You must fill this out.');
         return false;
     }
 
     if (sex == "") {
-        alert("Sex must be filled out!");
+        validate('sex-list','You must choose an option.');
         return false;
     }
 
     if (birthday == "") {
-        alert("Birthday must be filled out!");
+        validate('birthday','You must choose a date.');
         return false;
     } 
 
-    var birthdate2 = new Date(document.getElementById('birthday').value)
-    if(calculateAge(birthdate2) < 16){ 
-        alert("The user can't be younger than 16 years old!");
-        return false
+    var birthdate = new Date(document.getElementById('birthday').value)
+    if(calculateAge(birthdate) < 16){ 
+        validate_age('birthday');
+        return false;
     }
        
-
     if(regex.test(String(email).toLowerCase())) {
     }
     else{
-        alert("Email not valid")
+        validate('email','Invalid e-mail address.');
         return false;
     }
     
     // get the html table 
-    // 0 = the first table
     var table=document.getElementsByTagName('table')[0];
 
     // add new empty row to the table
-    // 0 = top 
-    // table.rows.length = end
     var newRow = table.insertRow(table.rows.length);
 
     // add cells to the row
@@ -70,13 +66,13 @@ function addRow(){
     cel2.innerHTML = lname;
     cel3.innerHTML = email;
     cel4.innerHTML = sex;
-    cel5.innerHTML = birthday;
-    cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger">';
+    cel5.innerHTML = formatDate(birthday);
+    cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="deleteRow(this);" class="btn btn-danger">';
 }
 
-function delStudent(Stud) {
-    var s=Stud.parentNode.parentNode;
-    s.parentNode.removeChild(s);
+function deleteRow(employee) {
+    var e=employee.parentNode.parentNode;
+    e.parentNode.removeChild(e);
 }
 const months = [
     'January',
@@ -104,9 +100,9 @@ function formatDate(user_date){
     return `${day} ${month} ${year}`
 }
 
-function calculateAge(birthday) { // birthday is a date
+function calculateAge(birthday) { 
     var ageDifMs = Date.now() - birthday.getTime();
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    var ageDate = new Date(ageDifMs); 
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 } 
 
@@ -150,11 +146,28 @@ function sortTable_alphabetically() {
         switching = true;
       }
     }
-  }
+}
      
 function selectedOption() {
         var option=document.getElementById('sort-list');
         if(option.value == "alphabetically"){
             sortTable_alphabetically();
         }
-  }
+}
+
+  
+function validate(inputID, string) {
+    const input = document.getElementById(inputID);
+    const validityState = input.validity;
+  
+    if (validityState.valueMissing) {
+      input.setCustomValidity(string);
+    } 
+    input.reportValidity();
+}
+
+function validate_age(inputID) {
+    const input = document.getElementById(inputID);
+    input.setCustomValidity("You must be older than 16 years old.");
+    input.reportValidity();
+}

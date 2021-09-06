@@ -50,7 +50,6 @@
                     <option value="">None</option>
                     <option value="Female">Female</option>
                     <option value="Male">Male</option>
-                    <option value="Unknown">Unknown</option>
                 </select>
             </div>
 
@@ -82,7 +81,6 @@
         <div class="filter-search">
             <label for="search">Filter by name</label>
             <input type="text" name="search" id="search" placeholder="Search..." onfocus="searchFunction();this.placeholder ='';" onblur=" this.placeholder = 'Search...'">
-            <i class="fas fa-search"></i>
         </div>
         <br>
             <div class="sort-select">
@@ -117,9 +115,8 @@
                         <td>claudia.naghi@principal33.com</td>
                         <td>Female</td>
                         <td>11 September 1999</td>
-                        <td><input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></td>
+                        <td><input type="button" name="delete" value="Delete" onclick="deleteRow(this);" class="btn btn-danger"></td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
