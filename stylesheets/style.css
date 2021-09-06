@@ -16,7 +16,7 @@
 h1 {
     text-align: center;
     padding-top: 1%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     color: white;
 }
 
@@ -36,7 +36,7 @@ h1 {
     background-color: white;
     border-radius: 15px;
     padding-bottom: 5px;
-    padding-top: 5px;
+    padding-top: 5px; 
 }
 .contents .left-part:hover {
     box-shadow: 0.3px 0.3px 3px 3px #929597;
@@ -92,6 +92,7 @@ input:hover {
     padding-left: 1%;
     padding-right: 1.5%;
 }
+
 .contents .right-part:hover {
     box-shadow: 0.3px 0.3px 3px 3px #929597;
 }
@@ -148,6 +149,7 @@ thead .table-first-line .delete-cell {
 .filter-search {
     padding-left: 0.7%;
 }
+
 .filter-search input {
     padding-left: 1%;
     width: 100%;
@@ -170,6 +172,7 @@ thead .table-first-line .delete-cell {
     padding-right: 1%;
 }
 
+/*Background*/
 .css-selector {
     background: linear-gradient(270deg, #355c7d, #6c5b7b, #c06c84);
     background-size: 600% 600%;

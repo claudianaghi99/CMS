@@ -9,7 +9,7 @@ function addRow(){
     var formatBirthday = moment(document.getElementById('birthday').value);
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
-    // Required to complete the following fields
+    // required to complete the following fields
     if (fname== "") {
         validate('fname','You must fill this out.');
         return false;
