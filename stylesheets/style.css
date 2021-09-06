@@ -38,7 +38,9 @@ h1 {
     padding-bottom: 5px;
     padding-top: 5px;
 }
-
+.contents .left-part:hover {
+    box-shadow: 0.3px 0.3px 3px 3px #929597;
+}
 input {
     padding-left: 1%;
     width: 97%;
@@ -46,7 +48,9 @@ input {
     border-radius: 8px;
     background-color: white;
 }
-
+input:hover {
+    box-shadow: 0.1px 0.1px 2px 2px #c7c8c9;
+}
 #file {
     background-color: white;
 }
@@ -58,14 +62,19 @@ input {
 .myForm label {
     font-size: 150%;
 }
-
+.photo input:hover {
+    box-shadow: 0.1px 0.1px 2px 2px white;
+}
 .myForm .sex-select select {
+    margin:2%;
     font-size:100%;
     border-radius: 8px;
     border-width: 2px;
     border-color: rgb(88, 87, 87);
 }
-
+.myForm .sex-list:hover {
+    box-shadow: 0.1px 0.1px 2px 2px #c7c8c9;
+}
 .submit-input {
     padding-bottom: 2%;
 }
@@ -83,11 +92,14 @@ input {
     padding-left: 1%;
     padding-right: 1.5%;
 }
+.contents .right-part:hover {
+    box-shadow: 0.3px 0.3px 3px 3px #929597;
+}
 
 table,
 tr,
 th,
-td{
+td {
     border: 0.5px solid black;
     text-align: center;
     border-collapse: collapse;
@@ -133,7 +145,7 @@ thead .table-first-line .delete-cell {
     padding-right: 2rem;
 }
 
-.filter-search{
+.filter-search {
     padding-left: 0.7%;
 }
 .filter-search input {
@@ -141,10 +153,23 @@ thead .table-first-line .delete-cell {
     width: 100%;
 }
 
-.sort-select{
+.filter-search input:hover {
+    box-shadow: 0.2px 0.2px 2px 2px #b9b9b9;;
+}
+
+.right-part .filter-search label {
+    display: block;
+    padding-bottom: 1%;
+}
+.sort-select {
     display:flex;
     padding-left: 0.7%;
 }
+
+.sort-select label {
+    padding-right: 1%;
+}
+
 .css-selector {
     background: linear-gradient(270deg, #355c7d, #6c5b7b, #c06c84);
     background-size: 600% 600%;
@@ -176,19 +201,18 @@ thead .table-first-line .delete-cell {
     100%{background-position:0% 50%}
 }
 
-@media(max-width: 800px){
+@media(max-width: 800px) {
 
-    .contents{
+    .contents {
         display: grid;
         grid-template-columns: 1fr;
 
     }
-
-    .contents .left-part{
+    .contents .left-part {
         width: 100%;
     }
 
-    .contents .right-part{
+    .contents .right-part {
         height: 110%;
     }
 }

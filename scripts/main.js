@@ -126,7 +126,7 @@ function sortTable_alphabetically() {
       }
     }
 }
-     
+
 function selectedOption() {
         var option=document.getElementById('sort-list');
         if(option.value == "alphabetically"){
