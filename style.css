@@ -77,10 +77,10 @@ input {
 
 /*Right part*/
 .contents .right-part {
-    padding-left: 1.3%;
-    width: 70rem;
+    width: 60rem;
     background-color: white;
     border-radius: 15px;
+    padding-left: 1%;
 }
 
 table,
@@ -90,21 +90,21 @@ td{
     border: 0.5px solid black;
     text-align: center;
     border-collapse: collapse;
-
 }
 
-
 .table-first-line th, tr,td {
-    padding: 20px;
+    padding: 7px;
 }
 
 .div-table {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
+    padding-left: 1%;
+    padding-right: 0%;
 }
 
 thead .table-first-line .first-name-cell {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 thead .table-first-line .last-name-cell {
@@ -118,8 +118,8 @@ thead .table-first-line .email-cell {
 }
 
 thead .table-first-line .birthday-cell {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 thead .table-first-line .sex-cell {
@@ -127,24 +127,28 @@ thead .table-first-line .sex-cell {
     padding-right: 2rem;
 }
 
-thead .table-first-line .trash-cell {
-    padding-left: 4rem;
-    padding-right: 4rem;
+thead .table-first-line .delete-cell {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
+.filter-search{
+    padding-left: 0.7%;
+}
 .filter-search input {
     position: relative;
-    width: 99.5%;
+    width: 97.7%;
 }
 
 .filter-search i {
     position: absolute;
-    right: 30px;
+    right: 50px;
     padding-top: 10px;
     color: #c06c84;
 }
 .sort-select{
     display:flex;
+    padding-left: 0.7%;
 }
 .css-selector {
     background: linear-gradient(270deg, #355c7d, #6c5b7b, #c06c84);

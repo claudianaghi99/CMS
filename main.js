@@ -151,18 +151,8 @@ function sortTable_alphabetically() {
       }
     }
   }
-//   var birthdate2 = new Date(document.getElementById('birthday').value)
-//   if(calculateAge(birthdate2) < 16){ 
-//       alert("The user can't be younger than 16 years old!");
-//       return false
-//   }
      
-function sortTable_age(){
-      var age_sort = new Date(document.getElementById('birthday').value)
-  if(calculateAge(age_sort) < 16){ 
-  }
-}
-  function selectedOption() {
+function selectedOption() {
         var option=document.getElementById('sort-list');
         if(option.value == "alphabetically"){
             sortTable_alphabetically();
