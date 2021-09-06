@@ -85,6 +85,17 @@
             <i class="fas fa-search"></i>
         </div>
         <div class="div-table">
+            <div class="sort-select">
+                <br>
+                <label for="sort">Sort by:</label>
+                <select id="sort-list" onchange="selectedOption()">
+                    <option value=" ">None</option>
+                    <option value="alphabetically">Alphabetically</option>
+                    <option value="ageD">Age - decreasing</option>
+                    <option value="ageI">Age - increasing</option>
+                </select>
+            </div>
+            <br>
             <table id="table">
                 <thead>
                     <tr class="table-first-line">
@@ -100,20 +111,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Claudia</th>
-                        <th>Naghi</th>
-                        <th>claudia.naghi@principal33.com</th>
-                        <th>Female</th>
-                        <th>11 September 1999</th>
-                        <th><input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></th>
+                        <td>Claudia</td>
+                        <td>Naghi</td>
+                        <td>claudia.naghi@principal33.com</td>
+                        <td>Female</td>
+                        <td>11 September 1999</td>
+                        <td><input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></td>
                     </tr>
                     <tr>
-                        <th>Ana</th>
-                        <th>Naghi</th>
-                        <th>claudia.naghi@principal33.com</th>
-                        <th>Female</th>
-                        <th>11 September 1999</th>
-                        <th><input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></th>
+                        <td>Ana</td>
+                        <td>Naghi</td>
+                        <td>claudia.naghi@principal33.com</td>
+                        <td>Female</td>
+                        <td>11 September 1999</td>
+                        <td><input type="button" name="delete" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></td>
                     </tr>
                 </tbody>
             </table>

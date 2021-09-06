@@ -84,13 +84,17 @@ input {
 }
 
 table,
+tr,
 th,
-td {
-    border: 2px solid black;
+td{
+    border: 0.5px solid black;
     text-align: center;
+    border-collapse: collapse;
+
 }
 
-.table-first-line th, tr {
+
+.table-first-line th, tr,td {
     padding: 20px;
 }
 
@@ -139,7 +143,9 @@ thead .table-first-line .trash-cell {
     padding-top: 10px;
     color: #c06c84;
 }
-
+.sort-select{
+    display:flex;
+}
 .css-selector {
     background: linear-gradient(270deg, #355c7d, #6c5b7b, #c06c84);
     background-size: 600% 600%;

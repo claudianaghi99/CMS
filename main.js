@@ -117,9 +117,54 @@ function searchFunction(){
     searchInput.addEventListener('keyup',function(event){
     const q = event.target.value.toLowerCase();
     rows.forEach((row) => {
-        row.querySelector('th').textContent.toLowerCase().startsWith(q)
+        row.querySelector('td').textContent.toLowerCase().startsWith(q)
         ? (row.style.display = 'table-row')
         : (row.style.display = 'none');
     });
     });
 }
+
+function sortTable_alphabetically() {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("table");
+    switching = true;
+
+    while (switching) {
+      switching = false;
+      rows = table.rows;
+
+      for (i = 1; i < (rows.length - 1); i++) {
+      
+        shouldSwitch = false;
+
+        x = rows[i].getElementsByTagName("td")[0];
+        y = rows[i + 1].getElementsByTagName("td")[0];
+   
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+  }
+//   var birthdate2 = new Date(document.getElementById('birthday').value)
+//   if(calculateAge(birthdate2) < 16){ 
+//       alert("The user can't be younger than 16 years old!");
+//       return false
+//   }
+     
+function sortTable_age(){
+      var age_sort = new Date(document.getElementById('birthday').value)
+  if(calculateAge(age_sort) < 16){ 
+  }
+}
+  function selectedOption() {
+        var option=document.getElementById('sort-list');
+        if(option.value == "alphabetically"){
+            sortTable_alphabetically();
+        }
+  }
