@@ -1,4 +1,4 @@
-function addRow(){
+function addRow() {
 
     // get input values 
     var fname = document.getElementById('fname').value;
@@ -36,14 +36,13 @@ function addRow(){
     } 
 
     var birthdate = new Date(document.getElementById('birthday').value)
-    if(calculateAge(birthdate) < 16){ 
+    if(calculateAge(birthdate) < 16) { 
         validate_age('birthday');
         return false;
     }
        
     if(regex.test(String(email).toLowerCase())) {
-    }
-    else{
+    } else {
         validate('email','Invalid e-mail address.');
         return false;
     }
@@ -55,20 +54,69 @@ function addRow(){
     var newRow = table.insertRow(table.rows.length);
 
     // add cells to the row
-    var cel1 = newRow.insertCell(0);
-    var cel2 = newRow.insertCell(1);
-    var cel3 = newRow.insertCell(2);
-    var cel4 = newRow.insertCell(3);
-    var cel5 = newRow.insertCell(4);
-    var cel6 = newRow.insertCell(5);
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
+    var cell5 = newRow.insertCell(4);
+    var cell6 = newRow.insertCell(5);
+
+    arrayEmployee = [];
+    arrayEmployee[0] = fname;
+    arrayEmployee[1] = lname;
+    arrayEmployee[2] = email;
+    arrayEmployee[3] = sex;
+    arrayEmployee[4] = formatBirthday.format("DD MMMM YYYY");
+    arrayEmployee[5] = '<input type="button" name="delete" value="Delete" onclick="deleteRow(this);" class="btn btn-danger">';
+    localStorage.setItem(`${email}`,arrayEmployee);
+
+    archive = localStorage.getItem(`${email}`);
+    arrayEmployee = archive.split(",");
 
     // add values to the cells
-    cel1.innerHTML = fname;
-    cel2.innerHTML = lname;
-    cel3.innerHTML = email;
-    cel4.innerHTML = sex;
-    cel5.innerHTML = formatBirthday.format("DD MMMM YYYY");
-    cel6.innerHTML = '<input type="button" name="delete" value="Delete" onclick="deleteRow(this);" class="btn btn-danger">';
+    cell1.innerHTML = arrayEmployee[0];
+    cell2.innerHTML = arrayEmployee[1];
+    cell3.innerHTML = arrayEmployee[2];
+    cell4.innerHTML = arrayEmployee[3];
+    cell5.innerHTML = arrayEmployee[4];
+    cell6.innerHTML = arrayEmployee[5];
+}
+
+function loadData(){
+    var j=1;
+    var archive=[];
+    for (var i = 0; i<localStorage.length; i++) 
+      {
+          archive[i] = localStorage.getItem(localStorage.key(i));
+          var arrayEmployee =  archive[i].split(",");
+          var row= table.insertRow(j);
+          row.id = arrayEmployee[0]+"row";
+          
+
+          var cell1 = row.insertCell(0);
+          cell1.innerHTML = arrayEmployee[0];
+
+          var cell2 = row.insertCell(1);
+          cell2.innerHTML = arrayEmployee[1];
+
+          var cell3 = row.insertCell(2);
+          cell3.innerHTML = arrayEmployee[2];
+
+          var cell4 = row.insertCell(3);
+          cell4.innerHTML = arrayEmployee[3];
+
+        //   var cell5 = row.insertCell(4);
+        //   cell5.innerHTML = arrayEmployee[4];
+
+          var cell5 = row.insertCell(4);
+          var birthdate = moment(arrayEmployee[4]);
+          cell5.innerHTML = birthdate.format("DD MMM YYYY");
+
+          var cell6 = row.insertCell(5);
+          cell6.innerHTML = arrayEmployee[5];
+
+          j++;
+      }
 }
 
 function deleteRow(employee) {
@@ -85,11 +133,11 @@ function calculateAge(birthday) {
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 } 
 
-function searchFunction(){
+function searchFunction() {
     const searchInput = document.getElementById("search");
     const rows = document.querySelectorAll('tbody tr');
    
-    searchInput.addEventListener('keyup',function(event){
+    searchInput.addEventListener('keyup',function(event) {
     const q = event.target.value.toLowerCase();
     rows.forEach((row) => {
         row.querySelector('td').textContent.toLowerCase().startsWith(q)
