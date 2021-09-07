@@ -219,3 +219,18 @@ thead .table-first-line .delete-cell {
         height: 110%;
     }
 }
+
+@media(min-width:1600px){
+    .contents .right-part {
+        width: 150%;
+        height: 55rem;
+    }
+
+    .contents .right-part table{
+        width: 100%;
+    }
+
+    .contents .left-part input{
+        height: 5rem;
+    }
+}
